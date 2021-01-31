@@ -1,0 +1,43 @@
+<%- include("../partials/head.ejs") %>
+
+<body>
+  <%- include("../partials/nav") %>
+
+  <header>
+    <div class="mini-banner">
+      <div class="mini-banner-text">
+        <h1>Breadcrumb</h1>
+        <h2><%- title %> page</h2>
+      </div>
+    </div>
+  </header>
+
+  <section class="blogs">
+    <div class="blogs-container">
+      <% if (blogs.length <= 15) { %>
+      <!--  -->
+      <% blogs.forEach(blog => { %>
+      <div class="single-blog">
+        <img
+          class="blog-image"
+          src="../images/hot chocolate 2.jpg"
+          alt="hot Choocolate"
+        />
+        <h1 class="blog-title"><%- blog.title %></h1>
+        <p class="blog-snippet"><%- blog.snippet %></p>
+        <ul>
+          <li><a href="/blogs/<%- blog.id %> ">Read more...</a></li>
+        </ul>
+      </div>
+
+      <% }) %>
+      <!--  -->
+      <% } else {%>
+      <p>There are no blogs currently</p>
+      <% } %>
+    </div>
+    <!-- </div> -->
+  </section>
+
+  <%- include("../partials/footer") %>
+</body>

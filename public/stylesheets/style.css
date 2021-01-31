@@ -1,0 +1,804 @@
+/* Declearing vsriables */
+:root {
+  --primary-color: #3d9205;
+  --secondary-color: #f0f00f;
+
+  --site-background: #ebe8e8;
+
+  --auth-gradient: linear-gradient(to left, #3d9205 #f0f00f);
+}
+
+/* Genral styling that aplies to all pages */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: var(--site-background);
+}
+
+.icon {
+  display: none;
+}
+
+nav {
+  width: 100%;
+  max-width: 2000px;
+  background-color: var(--site-background);
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  box-shadow: 0px 0px 10px 0px #181717;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+}
+
+.nav-logo {
+  align-items: flex-start;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.nav-wrapper,
+.nav-auth {
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-wrapper li,
+.nav-auth li {
+  list-style-type: none;
+}
+
+.nav-link,
+.nav-auth a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: #000;
+}
+
+.nav-link:hover {
+  padding: 15px;
+  color: var(--site-background);
+  background-color: var(--primary-color);
+}
+
+.nav-auth {
+  width: 20vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  background: var(--site-background);
+}
+
+.login,
+.signup {
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  background: var(--site-background);
+  cursor: pointer;
+  border: none;
+  box-shadow: -3px -3px 7px #fff, 3px 3px 5px rgba(54, 104, 121, 0.5);
+  position: relative;
+}
+
+.login {
+  box-shadow: inset -3px -3px 7px #fff,
+    inset 3px 3px 5px rgba(54, 104, 121, 0.5);
+}
+
+.login:focus,
+.signup:focus {
+  visibility: hidden;
+}
+
+footer {
+  background-color: var(--primary-color);
+  height: 7vh;
+}
+
+footer p {
+  padding: 15px;
+  color: var(--site-background);
+  font-weight: bold;
+}
+
+/* styling Index.ejs ------------------------------- */
+
+header {
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 90vh;
+  margin: auto;
+  padding: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../images/2959305.jpg);
+  background-size: cover;
+  position: relative;
+
+  /* opacity: 0.7; */
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: rgb(216, 216, 209);
+}
+
+.header-text h2 {
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.header-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 3px;
+  color: rgb(234, 241, 132);
+}
+
+.btn-primary {
+  width: 160px;
+  height: 60px;
+  font-weight: 600;
+  color: #faebd7;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  margin: 5px;
+  border: 2px solid rgb(29, 29, 29);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.btn-primary:hover {
+  box-shadow: 5px 5px 5px 5px black;
+  text-shadow: black;
+}
+
+.site-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+}
+
+.image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30em;
+  z-index: -10000;
+}
+
+.image2 {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 20em;
+}
+
+.site-intro-text {
+  width: 40%;
+  position: absolute;
+  top: 140px;
+  left: 30%;
+}
+
+.testimonials {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 2em;
+}
+
+.testimonials h2 {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.text-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 2em;
+  gap: 1em;
+}
+
+.text-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  width: 100%;
+  max-width: 1800px;
+}
+
+.text-images {
+  width: 8vw;
+  border-radius: 50%;
+}
+
+.text-group p {
+  width: 250px;
+}
+
+.store {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.store-heading {
+  font-weight: bolder;
+  font-size: 40px;
+  padding: 10px auto;
+  margin: 1em;
+}
+
+.store-products {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  gap: 0.5em;
+}
+
+.store-product {
+  position: relative;
+}
+
+.product-img {
+  width: 80%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  width: 140px;
+  height: 50px;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  border: none;
+  margin: 5px;
+  border: 2px solid rgb(29, 29, 29);
+  text-transform: uppercase;
+  font-weight: bolder;
+  box-shadow: 1px solid blue;
+  border: none;
+}
+
+.top-right {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+
+.visible {
+  display: flex !important;
+}
+
+/* styling Index.ejs  ends------------------------------- */
+
+/* styling ptoduct details ------------------- */
+
+.product-wrapper {
+  width: 805;
+  margin: 5em auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product-wrapper > .product-img {
+  width: 50%;
+}
+
+/* styling ptoduct details ends ------------------- */
+
+/* styling About.ejs ------------------------------- */
+
+.mini-banner {
+  width: 100%;
+  height: 20vh;
+  margin: auto;
+  padding: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../images/2959305.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.mini-banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  gap: 1em;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mini-banner-text {
+  z-index: 1000;
+}
+
+.mini-banner-text h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.mini-banner-text h2 {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.site-team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 5em auto;
+}
+
+.team-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  width: 80%;
+  align-items: stretch;
+  gap: 2em;
+  padding-top: 1.5em;
+}
+
+.img-group img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 15px;
+}
+
+/* styling About.ejs  ends ------------------------------- */
+
+/* styling Service.ejs ------------------------------- */
+
+.services {
+  height: 47vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.services h2 {
+  align-self: center;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.service {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  align-content: center;
+}
+
+.service-item {
+  margin: 5px;
+}
+
+/* styling Service.ejs  ends ------------------------------- */
+
+/* styling Contact.ejs  ------------------------------- */
+
+form {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-details {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 30%;
+}
+
+label {
+  padding: 20px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.contact-input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.contact-input:focus {
+  outline: none;
+}
+
+.form-message {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  border: 2px solid var(--primary-color);
+}
+
+/* styling Contact.ejs  ends ------------------------------- */
+/* create blogs styling ----------------------------- */
+
+.create-blog {
+  width: 100vw;
+  height: 65vh;
+}
+
+.create-blog form {
+  width: 50vw;
+  min-height: 30em;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.create-blog label {
+  align-self: flex-start;
+}
+
+.create-blog button {
+  align-self: center;
+  border: 1px solid var(--primary-color);
+}
+
+/* Single blog styling */
+.single-blogs-container {
+  width: 90%;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: 3fr 1fr;
+  margin: 5em auto;
+  gap: 1.5em;
+  /* grid-template-areas: box1 box2; */
+  position: relative;
+  height: auto;
+}
+
+.blog-img {
+  width: 80%;
+  height: 410px;
+  position: relative;
+}
+
+.single-blog-title {
+  position: absolute;
+  bottom: 0;
+  left: 3em;
+  background-color: var(--site-background);
+  width: 40%;
+  height: 20%;
+}
+
+.blog-body {
+  position: absolute;
+  top: 30em;
+  left: 7em;
+}
+
+.featured-post {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding-top: 1em;
+}
+
+.aside-images {
+  width: 30%;
+  /* height: 20%; */
+}
+
+/* Login and sign up page styling */
+.fields {
+  width: 100%;
+  height: 100vh;
+  padding: 40px 5px 5px 5px;
+}
+
+.fields input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  padding: 20px 10px 20px 5px;
+}
+
+input:focus {
+  background: none;
+}
+
+.username,
+.password {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbcbcb, inset -8px 8px 8px #fff;
+}
+
+.user-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-group input {
+  width: 50%;
+  padding: auto 1em;
+}
+
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100vh;
+}
+
+.form-field {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.signin-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+  background: var(--primary-color);
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: 0.5s;
+}
+
+.signin-button:hover {
+  background: #2fdbb6;
+}
+
+.signin-button:active {
+  background: #1da88a;
+}
+
+.link {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.link a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 15px;
+}
+
+.form-field form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* blog styling ----------------------------------------------- */
+
+.blogs {
+  width: 100%;
+  padding: 0 20px;
+  margin: 5em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.blogs-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 5px;
+  gap: 2em;
+}
+
+.blog-image {
+  /* width: 100%; */
+  height: 240px;
+}
+
+@media screen and (max-width: 576px) {
+  /* general styling for the nav ----------------------------- */
+  nav {
+    position: relative;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .nav-link {
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .nav-auth {
+    width: 100%;
+    flex-direction: column;
+    height: 20vh;
+    position: absolute;
+    background-color: var(--secondary-color);
+    top: 80vh;
+    left: 0;
+    justify-items: center;
+    align-items: center;
+    display: none;
+  }
+
+  .icon {
+    display: inline;
+    z-index: 10000;
+    cursor: pointer;
+  }
+
+  /* hompage styling ---------------------------------- */
+
+  .header-text {
+    width: 70rem;
+  }
+  .site-intro-text {
+    top: 5em;
+    width: 60%;
+    margin: auto;
+  }
+  .text-images {
+    width: 50%;
+  }
+  .store-products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .top-right {
+    width: 60%;
+    height: 40px;
+    right: 15px;
+  }
+
+  /* about styling ----------------------------------- */
+
+  .image1 {
+    width: 15em;
+  }
+  .image2 {
+    display: none;
+  }
+
+  /* contact styling ------------------------------- */
+  form {
+    flex-direction: column;
+    height: 80vh;
+  }
+  .form-details,
+  .form-message {
+    width: 80%;
+    align-self: stretch;
+    margin: auto;
+  }
+  .form-message {
+    align-items: stretch;
+  }
+  .btn-secondary {
+    align-self: center;
+  }
+
+  /* service styling -------------------------------------- */
+
+  .services {
+    height: auto;
+  }
+
+  /* login styling --------------------------------------- */
+
+  .auth-image {
+    display: none;
+  }
+
+  .form-container {
+    margin: auto;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  /* create blog styling ------------------------------------- */
+
+  .create-blog {
+    height: auto;
+  }
+  .create-blog form {
+    width: 80vw;
+  }
+
+  /* blog rtyling ----------------------- */
+  .blogs {
+    width: 100%;
+  }
+  .blogs-container {
+    width: 100%;
+    gap: 1em;
+  }
+}

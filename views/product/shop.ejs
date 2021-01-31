@@ -1,0 +1,36 @@
+<%- include("../partials/head.ejs") %>
+
+<body>
+  <%- include("../partials/nav") %>
+
+  <main>
+    <h1><%- title %></h1>
+    <p>Welcome to <%- title %></p>
+  </main>
+
+  <section class="store">
+    <h2 class="store-heading">Our Store</h2>
+    <div class="store-products">
+      <% if (products.length > 0) { %> <% products.forEach(product => { %>
+      <div class="store-product">
+        <div class="product-group">
+          <div class="product-img-group">
+            <a href="products/<%- product.id %> ">
+              <img
+                src="<%- product.productImage %> "
+                alt="product name"
+                class="product-img"
+              />
+            </a>
+
+            <button class="btn-secondary top-right">Add to cart</button>
+          </div>
+          <h3 class="product-name"><%- product.name %></h3>
+          <p class="product-price">$<%- product.price %></p>
+        </div>
+      </div>
+      <% }) %> <% } %>
+    </div>
+  </section>
+  <%- include("../partials/footer") %>
+</body>

@@ -1,0 +1,41 @@
+<%- include("../partials/head.ejs") %>
+
+<body>
+  <%- include("../partials/nav.ejs") %>
+
+  <header>
+    <div class="mini-banner">
+      <div class="mini-banner-text">
+        <h1>Breadcrumb</h1>
+        <h2><%- title %> page</h2>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="create-blog content">
+      <form method="POST">
+        <label for="title"> Blog title: </label>
+        <input
+          type="text"
+          class="contact-input"
+          id="title"
+          name="title"
+          required
+        />
+        <label for="snippet">Blog snippet: </label>
+        <input
+          type="text"
+          class="contact-input"
+          name="snippet"
+          id="snippet"
+          required
+        />
+        <label for="body">Blog body: </label>
+        <textarea name="body" id="body" cols="30" rows="30"></textarea>
+        <button type="submit" class="btn-secondary">Submit</button>
+      </form>
+    </div>
+  </main>
+  <%- include("../partials/footer.ejs") %>
+</body>

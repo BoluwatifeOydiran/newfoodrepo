@@ -1,0 +1,39 @@
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <div class="form-container">
+    <div class="auth-image">
+      <img src="../images/hamburger.png" alt="hot Chocolate" />
+    </div>
+    <div class="form-field">
+      <form id="user-signup" >
+        <div class="fields">
+          <div class="user-group">
+            <div class="username">
+            <input type="text" name="firstname" placeholder="Firstname :" />
+          </div>
+          <div class="username">
+            <input type="text" name="lastname" placeholder="Lastname :" />
+          </div>
+          </div>
+          <div class="username">
+            <input type="email" name="email" placeholder="Email :" />
+          </div>
+          <div class="password">
+            <input type="password" name="password" placeholder="Password :" />
+          </div>
+          <div class="password">
+            <input type="password" name="cpass" placeholder="Confirm password :" />
+          </div>
+        </div>
+
+        <button class="signin-button">Sign Up</button>
+        <div class="link">
+          <a href="#">Forgot password</a> or
+          <a href="/users/login">Log In</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+</body>

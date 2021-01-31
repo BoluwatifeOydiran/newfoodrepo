@@ -1,0 +1,46 @@
+<%- include("../partials/head.ejs") %>
+
+<body>
+  <%- include("../partials/nav") %>
+
+  <header>
+    <div class="mini-banner">
+      <div class="mini-banner-text">
+        <h1>Breadcrumb</h1>
+        <h2>
+          <span><a href="/">Home ></a></span>
+          <span><a href="/blogs"> Blogs ></a></span>
+          <span><%- blog.title %> </span>
+        </h2>
+      </div>
+    </div>
+  </header>
+
+  <div class="single-blogs-container">
+    <div class="single-blog-wrapper">
+      <img
+        class="blog-img"
+        src="/images/vegies and egg.jpg"
+        alt="hot Choocolate"
+      />
+      <h1 class="single-blog-title"><%- blog.title %></h1>
+
+      <p class="blog-body"><%- blog.body %></p>
+    </div>
+    <aside class="blog-aside">
+      <h2>Feature post</h2>
+      <div class="featured-post">
+        <img
+          src="/images/hot chocolate1.jpg"
+          alt="hot chocolate"
+          class="aside-images"
+        />
+        <div>
+          <h2><%- blog.title %></h2>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <%- include("../partials/footer") %>
+</body>

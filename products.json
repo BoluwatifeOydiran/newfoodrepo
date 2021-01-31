@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "sys": {
+        "id": "1"
+      },
+      "fields": {
+        "title": "hot chocolate",
+        "price": 10.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/hot chocolate1.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "2"
+      },
+      "fields": {
+        "title": "pizza",
+        "price": 12.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/pizza.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "3"
+      },
+      "fields": {
+        "title": "burger",
+        "price": 12.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/burger.png"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "4"
+      },
+      "fields": {
+        "title": "hamburger",
+        "price": 22.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/hamburger.png"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "5"
+      },
+      "fields": {
+        "title": "shawarma",
+        "price": 88.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/shawarma.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "6"
+      },
+      "fields": {
+        "title": "veggies and egg",
+        "price": 32.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/vegies and egg.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "7"
+      },
+      "fields": {
+        "title": "chocolate cake",
+        "price": 45.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/chocolate cake.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "8"
+      },
+      "fields": {
+        "title": "chocolate cup",
+        "price": 33.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./images/hot chocolate 2.jpg"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
